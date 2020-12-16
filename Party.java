@@ -45,9 +45,11 @@ public class Party {
 	public boolean charReroll( String name ) {
 		for( Character player : players ) {
 			if( player.getName().equals(name) ) {
-				player.
+				player.rerollChar( player );
+				return true;
 			}
 		}
+		return false;
 	}
 
 }
