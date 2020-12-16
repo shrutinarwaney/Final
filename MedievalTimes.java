@@ -86,7 +86,7 @@ public class MedievalTimes {
     		System.out.print( "Enter the name of the chatacter to randomize: " );
     		String characterName = userInput.nextLine();
     		
-    		if( test.charReroll( characterName ) ) {
+    		if( test.charReroll( characterName, fileName ) ) {
     			System.out.println( "Rerolled" );
     		} else {
     			System.out.println( "oops did not reroll" );

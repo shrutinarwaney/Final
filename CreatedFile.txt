@@ -1,5 +1,5 @@
 Gameeee
-Bob,Knight,9,6,3,6,6
+Bob,Knight,10,6,6,6,5
 Lil,Peasant,6,10,3,6,5
 Haha,Cleric,6,4,9,6,4
 Mageeeee,Mage,5,6,6,8,6

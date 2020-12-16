@@ -94,10 +94,11 @@ public class PlayerCharacter {
     	return new PlayerCharacter( arr[0], arr[1], scores );
     }
 
-    public void rerollChar( PlayerCharacter player ) {
+    public PlayerCharacter rerollChar( PlayerCharacter player ) {
     	int largest = getLargest( player.getRankNums() );
     	int index = getIntIndex( player.getRankNums(), largest );
-    	player = new PlayerCharacter( player.getName(), charTypes[ index ] );
+    	PlayerCharacter replaced = new PlayerCharacter( player.getName(), charTypes[ index ] );
+    	return replaced;
     }
 
     public String getName() { return name; }

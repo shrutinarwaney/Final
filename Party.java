@@ -47,12 +47,15 @@ public class Party {
 		}
 	}
 
-	public boolean charReroll( String name ) {
+	public boolean charReroll( String name, String fileName ) throws Exception {
+		int i = 0;
 		for( PlayerCharacter player : players ) {
 			if( player.getName().equals(name) ) {
-				player.rerollChar( player );
+				players[ i ] = player.rerollChar( player );
+				setWriteFile( fileName );
 				return true;
 			}
+			i++;
 		}
 		return false;
 	}
