@@ -3,7 +3,7 @@ import java.io.*;
 
 public class MedievalTimes {
 
-	Scanner userInput = new Scanner( System.in );
+	static Scanner userInput = new Scanner( System.in );
 	public static void main(String[] args) {
 		
 		System.out.println( "Welcome to medieval times!" );
