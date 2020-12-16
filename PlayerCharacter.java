@@ -32,7 +32,7 @@ public class PlayerCharacter {
 		while( isValid ) {
 
 			for( int i = 0; i < 5; i++ ) {
-				if( typePos == i ) {
+				if( i == typePos ) {
 					tempRanks[ i ] = ( 7 + ( int )( Math.random() * ( 10 - 7 ) + 1 ) );
 				}
 				else {
@@ -87,11 +87,11 @@ public class PlayerCharacter {
     public static PlayerCharacter parseLine( String line ) {
     	String[] arr = line.split( "," );
     	int[] scores = new int[5];
-    	for( int i = 1; i < arr.length; i++ ) {
+    	for( int i = 2; i < arr.length; i++ ) {
     		String temp = arr[ i ];
-    		 scores[ i - 1 ] = Integer.parseInt( temp );
+    		scores[ i - 2 ] = Integer.parseInt( temp );
     	}
-    	return new PlayerCharacter( arr[0], scores );
+    	return new PlayerCharacter( arr[0], arr[1], scores );
     }
 
     public void rerollChar( PlayerCharacter player ) {

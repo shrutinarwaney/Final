@@ -3,9 +3,8 @@ import java.io.*;
 
 public class MedievalTimes {
 
-	static Scanner userInput = new Scanner( System.in );
 	public static void main(String[] args) {
-		
+		Scanner userInput = new Scanner( System.in );
 		System.out.println( "Welcome to medieval times!" );
 
 		while( true ) {
@@ -43,6 +42,8 @@ public class MedievalTimes {
 
     public static void makeParty() {
 
+    	Scanner userInput = new Scanner( System.in );
+
     	Party party = new Party();
     	System.out.print( "What file to save to? (include .txt): " );
     	String fileName = userInput.nextLine();
@@ -58,6 +59,7 @@ public class MedievalTimes {
 
     public static void validate() {
 
+    	Scanner userInput = new Scanner( System.in );
     	System.out.print( "Enter a file to validate: " );
     	String fileName = userInput.nextLine();
     	try {
@@ -69,12 +71,14 @@ public class MedievalTimes {
     	}
     	catch( Exception e ) {
     		System.out.println( "Not a medieval times file" );
+    		e.printStackTrace();
     	}
 
     }
 
     public static void reroll() {
 
+    	Scanner userInput = new Scanner( System.in );
     	System.out.print( "Enter the file name where the game is: " );
     	String fileName = userInput.nextLine();
     	try {
@@ -93,6 +97,7 @@ public class MedievalTimes {
     	}
     	catch( Exception e ) {
     		System.out.println( "Not a medieval times file" );
+    		e.printStackTrace();
     	}
 
 

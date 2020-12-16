@@ -67,8 +67,8 @@ public class Party {
         System.out.println("Enter name of game");
         partyName = userInput.nextLine();
         
-        for ( int i = 1; i <= partySize; i++ ){
-            System.out.println("Enter type of PlayerCharacter #" + i + " (knight, peasant, cleric, mage, courtier)");
+        for ( int i = 0; i < partySize; i++ ){
+            System.out.println("Enter type of PlayerCharacter #" + (i + 1) + " (Knight, Peasant, Cleric, Mage, Courtier btw caps does matter)");
             String type = userInput.nextLine();
             if (type.toLowerCase().equals("knight")){
                 knightCount++;
